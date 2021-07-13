@@ -24,6 +24,16 @@ def collapse_lists(dict_to_collapse):
                 dict_to_collapse[key] = '; '.join([str(x) for x in dict_to_collapse[key]])
     return dict_to_collapse
 
+def get_datacite_api_response(authorization, base_url, url_extension, querystring=""):
+    # Headers for all API requests
+    headers = {
+        "accept": "application/vnd.api+json",
+        "authorization": authorization
+    }
+    url = base_url + url_extension
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return response.json()
+
 def main():
     load_dotenv()
     consortium_id = os.getenv('CONSORTIUM_ID')
@@ -39,16 +49,8 @@ def main():
         instance_type = "Production"
         base_url = "https://api.datacite.org/"
 
-    # Headers for all API requests
-    headers = {
-        'accept': "application/vnd.api+json",
-        'authorization': authorization
-        }
-
     # Get data for consortium
-    url_providers_consortium = base_url + "providers/" + consortium_id.lower()
-    r = requests.request("GET", url_providers_consortium, headers=headers)
-    consortium_json = r.json()
+    consortium_json = get_datacite_api_response(authorization, base_url, "providers/" + consortium_id.lower())
 
     # Grab the list of consortium orgs from the consortium data
     consortium_orgs_list = consortium_json['data']['relationships']['consortiumOrganizations']['data']
@@ -59,18 +61,14 @@ def main():
     # Get data for each consortium organization and its repositories
     for consortium_org in consortium_orgs_list:
         consortium_org_id = consortium_org['id']
-        url_providers_consortium_org = base_url + "providers/" + consortium_org_id
-        r = requests.request("GET", url_providers_consortium_org, headers=headers)
-        consortium_org_json = r.json()
+        consortium_org_json = get_datacite_api_response(authorization, base_url, "providers/" + consortium_org_id)
         try:
             if "data" in consortium_org_json:
                 consortium_org_data = consortium_org_json['data']
                 # Get each repository's data
                 for repo in consortium_org_data['relationships']['clients']['data']:
                     repo_id = repo['id']
-                    url_clients_repo = base_url + "clients/" + repo_id
-                    r = requests.request("GET", url_clients_repo, headers=headers)
-                    repo_json = r.json()
+                    repo_json = get_datacite_api_response(authorization, base_url, "clients/" + repo_id)
                     try:
                         repo_data = repo_json['data']
                         accounts_data.append(collapse_lists(repo_data))
