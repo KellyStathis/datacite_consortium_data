@@ -34,6 +34,21 @@ def get_datacite_api_response(authorization, base_url, url_extension, querystrin
     response = requests.request("GET", url, headers=headers, params=querystring)
     return response.json()
 
+def getEmails(email_list, account_data):
+    if "attributes" in account_data:
+        for emailType in ["contactEmail", "systemEmail", "groupEmail"]:
+            if emailType in account_data["attributes"] and account_data["attributes"][emailType]:
+                email = account_data["attributes"][emailType].lower()
+                if email not in email_list:
+                    email_list.append(email)
+        for contactType in ["technicalContact", "secondaryTechnicalContact", "billingContact",
+                            "secondaryBillingContact", "serviceContact", "secondaryServiceContact", "votingContact"]:
+            if contactType in account_data["attributes"] and "email" in account_data["attributes"][contactType] and account_data["attributes"][contactType]["email"]:
+                email = account_data["attributes"][contactType]["email"].lower()
+                if email not in email_list:
+                    email_list.append(email)
+    return email_list
+
 def main():
     load_dotenv()
     consortium_id = os.getenv('CONSORTIUM_ID')
@@ -58,6 +73,8 @@ def main():
 
     # List for all accounts, including both consortium organizations and repositories
     accounts_data = []
+    # Email list without duplicates
+    email_list = []
 
     # Get data for each consortium organization and its repositories
     for consortium_org in consortium_orgs_list:
@@ -73,10 +90,12 @@ def main():
                     try:
                         repo_data = repo_json['data']
                         accounts_data.append(collapse_lists(repo_data))
+                        email_list = getEmails(email_list, repo_data)
                         print("Saved data for repository: {} ({})".format(repo_id, consortium_org_id))
                     except Exception as e:
                         print("Error fetching data for repository {}.{}: {}".format(consortium_org_id, repo_id, e))
                 accounts_data.append(collapse_lists(consortium_org_data))
+                email_list = getEmails(email_list, consortium_org_data)
                 print("Saved data for consortium organization: {}".format(consortium_org_id))
             else:
                 print("Error fetching data for consortium organization {}: {}".format(consortium_org_id, consortium_org_json["errors"][0]["status"]))
@@ -85,10 +104,18 @@ def main():
 
     # Write list of all accounts to JSON file
     accounts_data_json = json.dumps(accounts_data)
-    output_filename = datetime.today().strftime('%Y%m%d') + "_" + consortium_id + "_" + instance_type + "_Accounts.json"
+    output_filename = datetime.today().strftime('%Y%m%d') + "_" + consortium_id.upper() + "_" + instance_type + "_Accounts.json"
     print("Writing data to file: {}".format(output_filename))
     f = open(output_filename, "w")
     f.write(accounts_data_json)
+
+    # Write email addressess to text file
+    output_filename = datetime.today().strftime('%Y%m%d') + "_" + consortium_id.upper() + "_" + instance_type + "_Emails.txt"
+    print("Writing data to file: {}".format(output_filename))
+    with open(output_filename, 'w') as f:
+        for email in sorted(email_list):
+            f.write("%s\n" % email)
+
 
 if __name__ == "__main__":
     main()

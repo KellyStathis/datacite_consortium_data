@@ -1,4 +1,4 @@
-This project exports account data for a DataCite consortium's consortium organizations and their repositories.
+This project exports account data and email addresses for a DataCite consortium's consortium organizations and their repositories.
 
 ## Configuration
 
