@@ -39,7 +39,8 @@ def main():
     consortium_id = os.getenv('CONSORTIUM_ID')
     consortium_pass = os.getenv('CONSORTIUM_PASS')
     test_instance = os.getenv('TEST_INSTANCE')
-    authorization = "Basic " + str(base64.encodebytes(bytes(consortium_id + ":" + consortium_pass, 'utf8')))[2:-3]
+    userpass = consortium_id + ":" + consortium_pass
+    authorization = "Basic {}".format(base64.b64encode(userpass.encode()).decode())
 
     # Set base url (prod or test)
     if test_instance and test_instance.lower() == "true":
@@ -76,7 +77,7 @@ def main():
                     except Exception as e:
                         print("Error fetching data for repository {}.{}: {}".format(consortium_org_id, repo_id, e))
                 accounts_data.append(collapse_lists(consortium_org_data))
-                print("Saved data for consortium: {}".format(consortium_org_id))
+                print("Saved data for consortium organization: {}".format(consortium_org_id))
             else:
                 print("Error fetching data for consortium organization {}: {}".format(consortium_org_id, consortium_org_json["errors"][0]["status"]))
         except Exception as e:
@@ -84,7 +85,7 @@ def main():
 
     # Write list of all accounts to JSON file
     accounts_data_json = json.dumps(accounts_data)
-    output_filename = datetime.today().strftime('%Y-%m-%d') + "_" + consortium_id + "_" + instance_type + "_Accounts.json"
+    output_filename = datetime.today().strftime('%Y%m%d') + "_" + consortium_id + "_" + instance_type + "_Accounts.json"
     print("Writing data to file: {}".format(output_filename))
     f = open(output_filename, "w")
     f.write(accounts_data_json)
