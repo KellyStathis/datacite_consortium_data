@@ -104,13 +104,13 @@ def main():
 
     # Write list of all accounts to JSON file
     accounts_data_json = json.dumps(accounts_data)
-    output_filename = datetime.today().strftime('%Y%m%d') + "_" + consortium_id.upper() + "_" + instance_type + "_Accounts.json"
+    output_filename = consortium_id.upper() + "_" + instance_type + "_Accounts_" + datetime.today().strftime('%Y%m%d_%H%M') + ".json"
     print("Writing data to file: {}".format(output_filename))
     f = open(output_filename, "w")
     f.write(accounts_data_json)
 
     # Write email addressess to text file
-    output_filename = datetime.today().strftime('%Y%m%d') + "_" + consortium_id.upper() + "_" + instance_type + "_Emails.txt"
+    output_filename = consortium_id.upper() + "_" + instance_type + "_Emails_" + datetime.today().strftime('%Y%m%d_%H%M') + ".txt"
     print("Writing data to file: {}".format(output_filename))
     with open(output_filename, 'w') as f:
         for email in sorted(email_list):
