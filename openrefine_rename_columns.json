@@ -1,0 +1,422 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - id",
+    "newColumnName": "id",
+    "description": "Rename column _ - id to id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - type",
+    "newColumnName": "type",
+    "description": "Rename column _ - type to type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - name",
+    "newColumnName": "name",
+    "description": "Rename column _ - attributes - name to name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - symbol",
+    "newColumnName": "symbol",
+    "description": "Rename column _ - attributes - symbol to symbol"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - created",
+    "newColumnName": "created",
+    "description": "Rename column _ - attributes - created to created"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - updated",
+    "newColumnName": "updated",
+    "description": "Rename column _ - attributes - updated to updated"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - isActive",
+    "newColumnName": "isActive",
+    "description": "Rename column _ - attributes - isActive to isActive"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - globusUuid",
+    "newColumnName": "globusUuid",
+    "description": "Rename column _ - attributes - globusUuid to globusUuid"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - description",
+    "newColumnName": "description",
+    "description": "Rename column _ - attributes - description to description"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - hasPassword",
+    "newColumnName": "hasPassword",
+    "description": "Rename column _ - attributes - hasPassword to hasPassword"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - salesforceId",
+    "newColumnName": "salesforceId",
+    "description": "Rename column _ - attributes - salesforceId to salesforceId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - url",
+    "newColumnName": "url",
+    "description": "Rename column _ - attributes - url to url"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - year",
+    "newColumnName": "year",
+    "description": "Rename column _ - attributes - year to year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - domains",
+    "newColumnName": "domains",
+    "description": "Rename column _ - attributes - domains to domains"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - re3data",
+    "newColumnName": "re3data",
+    "description": "Rename column _ - attributes - re3data to re3data"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - language",
+    "newColumnName": "language",
+    "description": "Rename column _ - attributes - language to language"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - opendoar",
+    "newColumnName": "opendoar",
+    "description": "Rename column _ - attributes - opendoar to opendoar"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - clientType",
+    "newColumnName": "clientType",
+    "description": "Rename column _ - attributes - clientType to clientType"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - contactEmail",
+    "newColumnName": "contactEmail",
+    "description": "Rename column _ - attributes - contactEmail to contactEmail"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - alternateName",
+    "newColumnName": "alternateName",
+    "description": "Rename column _ - attributes - alternateName to alternateName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - analyticsDashboardUrl",
+    "newColumnName": "analyticsDashboardUrl",
+    "description": "Rename column _ - attributes - analyticsDashboardUrl to analyticsDashboardUrl"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - rorId",
+    "newColumnName": "rorId",
+    "description": "Rename column _ - attributes - rorId to rorId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - region",
+    "newColumnName": "region",
+    "description": "Rename column _ - attributes - region to region"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - joined",
+    "newColumnName": "joined",
+    "description": "Rename column _ - attributes - joined to joined"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - website",
+    "newColumnName": "website",
+    "description": "Rename column _ - attributes - website to website"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - country",
+    "newColumnName": "country",
+    "description": "Rename column _ - attributes - country to country"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - logoUrl",
+    "newColumnName": "logoUrl",
+    "description": "Rename column _ - attributes - logoUrl to logoUrl"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - focusArea",
+    "newColumnName": "focusArea",
+    "description": "Rename column _ - attributes - focusArea to focusArea"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - groupEmail",
+    "newColumnName": "groupEmail",
+    "description": "Rename column _ - attributes - groupEmail to groupEmail"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - memberType",
+    "newColumnName": "memberType",
+    "description": "Rename column _ - attributes - memberType to memberType"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - displayName",
+    "newColumnName": "displayName",
+    "description": "Rename column _ - attributes - displayName to displayName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - systemEmail",
+    "newColumnName": "systemEmail",
+    "description": "Rename column _ - attributes - systemEmail to systemEmail"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - twitterHandle",
+    "newColumnName": "twitterHandle",
+    "description": "Rename column _ - attributes - twitterHandle to twitterHandle"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - nonProfitStatus",
+    "newColumnName": "nonProfitStatus",
+    "description": "Rename column _ - attributes - nonProfitStatus to nonProfitStatus"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - organizationType",
+    "newColumnName": "organizationType",
+    "description": "Rename column _ - attributes - organizationType to organizationType"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - hasRequiredContacts",
+    "newColumnName": "hasRequiredContacts",
+    "description": "Rename column _ - attributes - hasRequiredContacts to hasRequiredContacts"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - serviceContact - email",
+    "newColumnName": "serviceContact - email",
+    "description": "Rename column _ - attributes - serviceContact - email to serviceContact - email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - serviceContact - givenName",
+    "newColumnName": "serviceContact - givenName",
+    "description": "Rename column _ - attributes - serviceContact - givenName to serviceContact - givenName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - serviceContact - familyName",
+    "newColumnName": "serviceContact - familyName",
+    "description": "Rename column _ - attributes - serviceContact - familyName to serviceContact - familyName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - technicalContact - email",
+    "newColumnName": "technicalContact - email",
+    "description": "Rename column _ - attributes - technicalContact - email to technicalContact - email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - technicalContact - givenName",
+    "newColumnName": "technicalContact - givenName",
+    "description": "Rename column _ - attributes - technicalContact - givenName to technicalContact - givenName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - technicalContact - familyName",
+    "newColumnName": "technicalContact - familyName",
+    "description": "Rename column _ - attributes - technicalContact - familyName to technicalContact - familyName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - billingInformation - city",
+    "newColumnName": "billingInformation - city",
+    "description": "Rename column _ - attributes - billingInformation - city to billingInformation - city"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - billingInformation - state",
+    "newColumnName": "billingInformation - state",
+    "description": "Rename column _ - attributes - billingInformation - state to billingInformation - state"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - billingInformation - country",
+    "newColumnName": "billingInformation - country",
+    "description": "Rename column _ - attributes - billingInformation - country to billingInformation - country"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryServiceContact - email",
+    "newColumnName": "secondaryServiceContact - email",
+    "description": "Rename column _ - attributes - secondaryServiceContact - email to secondaryServiceContact - email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryServiceContact - givenName",
+    "newColumnName": "secondaryServiceContact - givenName",
+    "description": "Rename column _ - attributes - secondaryServiceContact - givenName to secondaryServiceContact - givenName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryServiceContact - familyName",
+    "newColumnName": "secondaryServiceContact - familyName",
+    "description": "Rename column _ - attributes - secondaryServiceContact - familyName to secondaryServiceContact - familyName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryTechnicalContact - email",
+    "newColumnName": "secondaryTechnicalContact - email",
+    "description": "Rename column _ - attributes - secondaryTechnicalContact - email to secondaryTechnicalContact - email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryTechnicalContact - givenName",
+    "newColumnName": "secondaryTechnicalContact - givenName",
+    "description": "Rename column _ - attributes - secondaryTechnicalContact - givenName to secondaryTechnicalContact - givenName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryTechnicalContact - familyName",
+    "newColumnName": "secondaryTechnicalContact - familyName",
+    "description": "Rename column _ - attributes - secondaryTechnicalContact - familyName to secondaryTechnicalContact - familyName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - votingContact - email",
+    "newColumnName": "votingContact - email",
+    "description": "Rename column _ - attributes - votingContact - email to votingContact - email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - votingContact - givenName",
+    "newColumnName": "votingContact - givenName",
+    "description": "Rename column _ - attributes - votingContact - givenName to votingContact - givenName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - votingContact - familyName",
+    "newColumnName": "votingContact - familyName",
+    "description": "Rename column _ - attributes - votingContact - familyName to votingContact - familyName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - billingContact - email",
+    "newColumnName": "billingContact - email",
+    "description": "Rename column _ - attributes - billingContact - email to billingContact - email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - billingContact - givenName",
+    "newColumnName": "billingContact - givenName",
+    "description": "Rename column _ - attributes - billingContact - givenName to billingContact - givenName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - billingContact - familyName",
+    "newColumnName": "billingContact - familyName",
+    "description": "Rename column _ - attributes - billingContact - familyName to billingContact - familyName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryBillingContact - email",
+    "newColumnName": "secondaryBillingContact - email",
+    "description": "Rename column _ - attributes - secondaryBillingContact - email to secondaryBillingContact - email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryBillingContact - givenName",
+    "newColumnName": "secondaryBillingContact - givenName",
+    "description": "Rename column _ - attributes - secondaryBillingContact - givenName to secondaryBillingContact - givenName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - secondaryBillingContact - familyName",
+    "newColumnName": "secondaryBillingContact - familyName",
+    "description": "Rename column _ - attributes - secondaryBillingContact - familyName to secondaryBillingContact - familyName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - issn - issnl",
+    "newColumnName": "issn - issnl",
+    "description": "Rename column _ - attributes - issn - issnl to issn - issnl"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - issn - print",
+    "newColumnName": "issn - print",
+    "description": "Rename column _ - attributes - issn - print to issn - print"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - attributes - issn - electronic",
+    "newColumnName": "issn - electronic",
+    "description": "Rename column _ - attributes - issn - electronic to issn - electronic"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - relationships - prefixes - data",
+    "newColumnName": "prefixes - data",
+    "description": "Rename column _ - relationships - prefixes - data to prefixes - data"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - relationships - consortium - data - id",
+    "newColumnName": "consortium - data - id",
+    "description": "Rename column _ - relationships - consortium - data - id to consortium - data - id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - relationships - consortium - data - type",
+    "newColumnName": "consortium - data - type",
+    "description": "Rename column _ - relationships - consortium - data - type to consortium - data - type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - relationships - provider - data - id",
+    "newColumnName": "provider - data - id",
+    "description": "Rename column _ - relationships - provider - data - id to provider - data - id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - relationships - provider - data - type",
+    "newColumnName": "provider - data - type",
+    "description": "Rename column _ - relationships - provider - data - type to provider - data - type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - relationships - clients - data",
+    "newColumnName": "clients - data",
+    "description": "Rename column _ - relationships - clients - data to clients - data"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "_ - relationships - contacts - data",
+    "newColumnName": "contacts - data",
+    "description": "Rename column _ - relationships - contacts - data to contacts - data"
+  }
+]

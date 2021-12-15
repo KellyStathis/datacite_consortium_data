@@ -2,3 +2,5 @@
 .env
 *.txt
 *.json
+!openrefine_rename_columns.json
+
